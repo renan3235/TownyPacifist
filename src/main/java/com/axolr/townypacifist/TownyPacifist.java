@@ -12,6 +12,7 @@ import java.nio.file.Path;
 public final class TownyPacifist extends JavaPlugin {
 
     private static TownyPacifist instance;
+    private static boolean siegeWarEnabled = false;
 
     @Override
     public void onEnable() {
@@ -27,6 +28,9 @@ public final class TownyPacifist extends JavaPlugin {
 
         loadTranslations();
 
+        siegeWarEnabled = getServer().getPluginManager().getPlugin("SiegeWar") != null;
+        if (siegeWarEnabled) getLogger().info("SiegeWar detected — peaceful integration active.");
+
         getServer().getPluginManager().registerEvents(new DamageListener(), this);
         getServer().getPluginManager().registerEvents(new TownyEventListener(), this);
 
@@ -40,6 +44,10 @@ public final class TownyPacifist extends JavaPlugin {
 
     public static TownyPacifist getPlugin() {
         return instance;
+    }
+
+    public static boolean isSiegeWarEnabled() {
+        return siegeWarEnabled;
     }
 
     public void loadTranslations() {

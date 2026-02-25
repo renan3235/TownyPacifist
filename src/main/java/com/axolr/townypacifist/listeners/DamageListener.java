@@ -1,6 +1,8 @@
 package com.axolr.townypacifist.listeners;
 
+import com.axolr.townypacifist.TownyPacifist;
 import com.axolr.townypacifist.TownyPacifistSettings;
+import com.axolr.townypacifist.hooks.SiegeWarHook;
 import com.palmergames.bukkit.towny.TownyAPI;
 import com.palmergames.bukkit.towny.event.PlayerChangePlotEvent;
 import com.palmergames.bukkit.towny.event.damage.TownyPlayerDamagePlayerEvent;
@@ -31,8 +33,8 @@ public class DamageListener implements Listener {
         Town attackerTown = event.getAttackerTown();
         Town victimTown   = event.getVictimTown();
 
-        boolean attackerPacifist = attackerTown != null && attackerTown.isNeutral();
-        boolean victimPacifist   = victimTown   != null && victimTown.isNeutral();
+        boolean attackerPacifist = attackerTown != null && isPeaceful(attackerTown);
+        boolean victimPacifist   = victimTown   != null && isPeaceful(victimTown);
 
         if (!attackerPacifist && !victimPacifist) return;
 
@@ -63,7 +65,7 @@ public class DamageListener implements Listener {
         if (!TownyPacifistSettings.allowPacifistInArenas()) return;
 
         Town town = TownyAPI.getInstance().getTown(event.getPlayer());
-        if (town == null || !town.isNeutral()) return;
+        if (town == null || !isPeaceful(town)) return;
 
         UUID uuid = event.getPlayer().getUniqueId();
         boolean enteringArena = isArena(event.getTo());
@@ -77,6 +79,11 @@ public class DamageListener implements Listener {
         } else if (!enteringArena && leavingArena) {
             arenaNotified.remove(uuid);
         }
+    }
+
+    private static boolean isPeaceful(Town town) {
+        if (town.isNeutral()) return true;
+        return TownyPacifist.isSiegeWarEnabled() && SiegeWarHook.isTownPeaceful(town);
     }
 
     private boolean isArena(WorldCoord coord) {
