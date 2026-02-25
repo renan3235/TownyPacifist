@@ -1,0 +1,4 @@
+townypacifist.target-is-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7&e%s&7 pertence a uma cidade pacifista. &aDerramar sangue aqui é &2proibido&a."
+townypacifist.attacker-is-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7Sua cidade &aescolheu a paz. &7Guarde suas armas &2— combate não é permitido."
+townypacifist.both-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7Ambas as cidades trilham o &2caminho da paz. &7Nenhum sangue será derramado aqui."
+townypacifist.arena-pvp-allowed: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7Você está numa &6arena&7! &eAs regras de paz não valem aqui &7— divirta-se!"

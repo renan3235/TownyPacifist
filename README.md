@@ -61,9 +61,6 @@ No TownyPacifist commands needed.
 # Enable or disable all protection globally
 enabled: true
 
-# Language (en_US, pt_BR — or add your own in the lang/ folder)
-language: en_US
-
 # Allow peaceful town members to PvP inside Towny arena plots
 allow-pacifist-in-arenas: true
 ```
@@ -72,10 +69,12 @@ allow-pacifist-in-arenas: true
 
 ## 🌍 Adding a Language
 
+TownyPacifist uses Towny's built-in translation system. Messages are delivered in each player's own language automatically.
+
 1. Go to `plugins/TownyPacifist/lang/`
-2. Copy `en_US.yml` and rename it (e.g. `es_ES.yml`)
+2. Copy `en-US.yml` and rename it (e.g. `es-ES.yml`)
 3. Translate the messages
-4. Set `language: es_ES` in `config.yml`
+4. Towny picks it up automatically — no config change needed
 
 ---
 
