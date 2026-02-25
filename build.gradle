@@ -6,7 +6,7 @@ plugins {
 }
 
 group   = 'com.axolr'
-version = '1.0.0'
+version = '1.0'
 
 // JDK 21 toolchain (located via gradle.properties)
 java {
