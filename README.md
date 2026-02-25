@@ -67,6 +67,9 @@ enabled: true
 
 # Allow peaceful town members to PvP inside Towny arena plots
 allow-pacifist-in-arenas: true
+
+# Allow peaceful town members to fight inside TownyCaptureSites plots (requires TownyCaptureSites)
+allow-pacifist-in-capture-sites: true
 ```
 
 ---
