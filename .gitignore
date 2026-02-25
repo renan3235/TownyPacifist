@@ -1,0 +1,17 @@
+# Gradle
+.gradle/
+build/
+gradle/wrapper/gradle-wrapper.jar
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+*.class
+
+# Dependency JARs (download them from their respective sources)
+libs/
+
+# OS
+.DS_Store
+Thumbs.db

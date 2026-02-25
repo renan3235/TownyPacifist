@@ -1,0 +1,8 @@
+name: TownyPacifist
+version: '${version}'
+main: com.axolr.townypacifist.TownyPacifist
+api-version: '1.21'
+authors: [ AxolR ]
+description: 'Towny addon — blocks combat involving towns with PVP disabled (peaceful towns)'
+
+depend: [ Towny ]

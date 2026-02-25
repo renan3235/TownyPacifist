@@ -1,0 +1,17 @@
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#   TownyPacifist — Language File: English (en_US)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+messages:
+
+  # Sent to the attacker when the victim's town is peaceful
+  target-is-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7&e{player}&7 belongs to a peaceful town. &aBloodshed is &2forbidden&a here."
+
+  # Sent to the attacker when their own town is peaceful
+  attacker-is-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7Your town has &achosen peace. &7Sheathe your weapons &2— no fighting allowed."
+
+  # Sent when both towns are peaceful
+  both-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7Both towns walk the &2path of peace. &7No blood shall be shed here."
+
+  # Sent when a pacifist player fights inside an arena (allow-pacifist-in-arenas: true)
+  arena-pvp-allowed: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7You're in an &6arena&7! &ePeace rules don't apply here &7— fight freely!"
