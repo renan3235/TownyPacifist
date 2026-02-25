@@ -103,10 +103,10 @@ allow-pacifist-in-arenas: true
 
 ## 📜 License
 
-MIT — see [LICENSE](LICENSE)
+Apache 2.0 — see [LICENSE](LICENSE)
 
 ---
 
 ## 👤 Author
 
-Made by **AxolR**
+Made by **RN_Axol**
