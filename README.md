@@ -18,7 +18,7 @@ Many servers struggle with a common problem: players from peaceful towns getting
 - **Bidirectional protection** — peaceful towns can't attack OR be attacked
 - **Arena support** — peaceful players can still PvP inside Towny arena plots (`/plot set arena`)
 - **EventWar integration** — works naturally alongside EventWar's neutrality system
-- **Multi-language** — comes with `en_US` and `pt_BR`, easily extendable
+- **Multi-language** — ships with 9 languages (en-US, pt-BR, es-ES, fr-FR, de-DE, zh-CN, ru-RU, pl-PL, tr-TR)
 - **Lightweight** — a single event listener, no databases, no commands
 
 ---
@@ -88,7 +88,7 @@ TownyPacifist uses Towny's built-in translation system. Messages are delivered i
 
 ```bash
 ./gradlew build
-# Output: build/libs/TownyPacifist-1.0.0.jar
+# Output: build/libs/TownyPacifist-1.0.jar
 ```
 
 ---
