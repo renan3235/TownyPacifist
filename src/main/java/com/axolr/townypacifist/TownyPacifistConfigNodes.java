@@ -13,7 +13,15 @@ public enum TownyPacifistConfigNodes {
         "true",
         "",
         "# Allow peaceful town members to PvP inside Towny arena plots.",
-        "# Players are notified once when they enter an arena.");
+        "# Players are notified once when they enter an arena."),
+
+    ALLOW_PACIFIST_IN_CAPTURE_SITES(
+        "allow-pacifist-in-capture-sites",
+        "true",
+        "",
+        "# Allow peaceful town members to fight inside TownyCaptureSites plots.",
+        "# Players are notified once when they enter a capture site.",
+        "# Requires TownyCaptureSites to be installed.");
 
     private final String root;
     private final String def;

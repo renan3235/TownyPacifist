@@ -19,6 +19,7 @@ Many servers struggle with a common problem: players from peaceful towns getting
 - **Arena support** — peaceful players can still PvP inside Towny arena plots (`/plot set arena`)
 - **EventWar integration** — works naturally alongside EventWar's neutrality system
 - **SiegeWar integration** — respects SiegeWar's own peaceful town system when installed
+- **TownyCaptureSites integration** — allows peaceful players to fight inside capture sites when installed
 - **Multi-language** — ships with 9 languages (en-US, pt-BR, es-ES, fr-FR, de-DE, zh-CN, ru-RU, pl-PL, tr-TR)
 - **Lightweight** — a single event listener, no databases, no commands
 
@@ -31,6 +32,7 @@ Many servers struggle with a common problem: players from peaceful towns getting
 | [Towny](https://github.com/TownyAdvanced/Towny) | ✅ Required |
 | [EventWar](https://github.com/TownyAdvanced/Towny) | ➕ Optional (integrates automatically) |
 | [SiegeWar](https://github.com/TownyAdvanced/SiegeWar) | ➕ Optional (integrates automatically) |
+| [TownyCaptureSites](https://github.com/TownyAdvanced/TownyCaptureSites) | ➕ Optional (integrates automatically) |
 
 ---
 
@@ -97,7 +99,7 @@ TownyPacifist uses Towny's built-in translation system. Messages are delivered i
 
 ## 🗺️ Planned Integrations
 
-- [ ] Capture sites
+- [x] Capture sites
 - [x] SiegeWar
 
 ---

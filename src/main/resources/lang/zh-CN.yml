@@ -2,3 +2,4 @@ townypacifist.target-is-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7&e%s&
 townypacifist.attacker-is-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7你的城镇&a选择了和平。&7收起你的武器&2——禁止战斗。"
 townypacifist.both-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7两个城镇都走在&2和平之路&7上。这里不会有流血事件。"
 townypacifist.arena-pvp-allowed: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7你在&6竞技场&7内！&e和平规则在此不适用&7——自由战斗！"
+townypacifist.capture-site-pvp-allowed: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7你在&6夺旗点&7内！&e和平规则在此不适用&7——为守护它而战！"

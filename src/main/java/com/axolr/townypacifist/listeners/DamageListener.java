@@ -2,6 +2,7 @@ package com.axolr.townypacifist.listeners;
 
 import com.axolr.townypacifist.TownyPacifist;
 import com.axolr.townypacifist.TownyPacifistSettings;
+import com.axolr.townypacifist.hooks.CaptureSitesHook;
 import com.axolr.townypacifist.hooks.SiegeWarHook;
 import com.palmergames.bukkit.towny.TownyAPI;
 import com.palmergames.bukkit.towny.event.PlayerChangePlotEvent;
@@ -26,6 +27,9 @@ public class DamageListener implements Listener {
     /** Players who have already been notified about arena PvP this visit. */
     private final Set<UUID> arenaNotified = new HashSet<>();
 
+    /** Players who have already been notified about capture site PvP this visit. */
+    private final Set<UUID> captureSiteNotified = new HashSet<>();
+
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
     public void onTownyPlayerDamagePlayer(TownyPlayerDamagePlayerEvent event) {
         if (!TownyPacifistSettings.isEnabled()) return;
@@ -42,6 +46,11 @@ public class DamageListener implements Listener {
         if (TownyPacifistSettings.allowPacifistInArenas()) {
             TownBlock block = event.getTownBlock();
             if (block != null && block.getType().equals(TownBlockType.ARENA)) return;
+        }
+
+        // Capture site bypass — message is sent on plot enter, not here
+        if (TownyPacifistSettings.allowPacifistInCaptureSites() && TownyPacifist.isCaptureSitesEnabled()) {
+            if (CaptureSitesHook.isCaptureSite(event.getVictimPlayer().getLocation())) return;
         }
 
         event.setCancelled(true);
@@ -62,22 +71,37 @@ public class DamageListener implements Listener {
     @EventHandler(priority = EventPriority.MONITOR)
     public void onPlayerChangePlot(PlayerChangePlotEvent event) {
         if (!TownyPacifistSettings.isEnabled()) return;
-        if (!TownyPacifistSettings.allowPacifistInArenas()) return;
 
         Town town = TownyAPI.getInstance().getTown(event.getPlayer());
         if (town == null || !isPeaceful(town)) return;
 
         UUID uuid = event.getPlayer().getUniqueId();
-        boolean enteringArena = isArena(event.getTo());
-        boolean leavingArena  = isArena(event.getFrom());
+        Resident resident = TownyAPI.getInstance().getResident(event.getPlayer());
 
-        if (enteringArena && !leavingArena) {
-            if (arenaNotified.add(uuid)) {
-                Resident resident = TownyAPI.getInstance().getResident(event.getPlayer());
-                event.getPlayer().sendMessage(msg("townypacifist.arena-pvp-allowed", resident));
+        // Arena notifications
+        if (TownyPacifistSettings.allowPacifistInArenas()) {
+            boolean enteringArena = isArena(event.getTo());
+            boolean leavingArena  = isArena(event.getFrom());
+
+            if (enteringArena && !leavingArena) {
+                if (arenaNotified.add(uuid))
+                    event.getPlayer().sendMessage(msg("townypacifist.arena-pvp-allowed", resident));
+            } else if (!enteringArena && leavingArena) {
+                arenaNotified.remove(uuid);
             }
-        } else if (!enteringArena && leavingArena) {
-            arenaNotified.remove(uuid);
+        }
+
+        // Capture site notifications
+        if (TownyPacifistSettings.allowPacifistInCaptureSites() && TownyPacifist.isCaptureSitesEnabled()) {
+            boolean enteringCaptureSite = CaptureSitesHook.isCaptureSite(event.getTo());
+            boolean leavingCaptureSite  = CaptureSitesHook.isCaptureSite(event.getFrom());
+
+            if (enteringCaptureSite && !leavingCaptureSite) {
+                if (captureSiteNotified.add(uuid))
+                    event.getPlayer().sendMessage(msg("townypacifist.capture-site-pvp-allowed", resident));
+            } else if (!enteringCaptureSite && leavingCaptureSite) {
+                captureSiteNotified.remove(uuid);
+            }
         }
     }
 

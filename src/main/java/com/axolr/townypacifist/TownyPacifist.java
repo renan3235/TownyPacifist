@@ -13,6 +13,7 @@ public final class TownyPacifist extends JavaPlugin {
 
     private static TownyPacifist instance;
     private static boolean siegeWarEnabled = false;
+    private static boolean captureSitesEnabled = false;
 
     @Override
     public void onEnable() {
@@ -31,6 +32,9 @@ public final class TownyPacifist extends JavaPlugin {
         siegeWarEnabled = getServer().getPluginManager().getPlugin("SiegeWar") != null;
         if (siegeWarEnabled) getLogger().info("SiegeWar detected — peaceful integration active.");
 
+        captureSitesEnabled = getServer().getPluginManager().getPlugin("TownyCaptureSites") != null;
+        if (captureSitesEnabled) getLogger().info("TownyCaptureSites detected — capture site integration active.");
+
         getServer().getPluginManager().registerEvents(new DamageListener(), this);
         getServer().getPluginManager().registerEvents(new TownyEventListener(), this);
 
@@ -48,6 +52,10 @@ public final class TownyPacifist extends JavaPlugin {
 
     public static boolean isSiegeWarEnabled() {
         return siegeWarEnabled;
+    }
+
+    public static boolean isCaptureSitesEnabled() {
+        return captureSitesEnabled;
     }
 
     public void loadTranslations() {

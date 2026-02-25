@@ -2,3 +2,4 @@ townypacifist.target-is-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7&e%s&
 townypacifist.attacker-is-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7Kasaban &abarışı seçti. &7Silahlarını kaldır &2— savaş yasak."
 townypacifist.both-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7Her iki kasaba da &2barış yolunda &7yürüyor. Burada kan dökülmeyecek."
 townypacifist.arena-pvp-allowed: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7Bir &6arenada&7sın! &eBarış kuralları burada geçerli değil &7— özgürce savaş!"
+townypacifist.capture-site-pvp-allowed: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7Bir &6capture site'dasın&7! &eBarış kuralları burada geçerli değil &7— onu savunmak için savaş!"

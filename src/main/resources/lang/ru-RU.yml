@@ -2,3 +2,4 @@ townypacifist.target-is-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7&e%s&
 townypacifist.attacker-is-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7Ваш город &aвыбрал мир. &7Уберите оружие &2— сражения запрещены."
 townypacifist.both-pacifist: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7Оба города идут по &2пути мира. &7Здесь не прольётся ни капли крови."
 townypacifist.arena-pvp-allowed: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7Вы на &6арене&7! &eПравила мира здесь не действуют &7— сражайтесь свободно!"
+townypacifist.capture-site-pvp-allowed: "&8&l[&r &6☮ &eTownyPacifist &8&l]&r &7Вы на &6capture site&7! &eПравила мира здесь не действуют &7— сражайтесь, чтобы защитить его!"

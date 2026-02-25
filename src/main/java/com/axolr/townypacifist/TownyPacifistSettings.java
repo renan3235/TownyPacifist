@@ -46,4 +46,9 @@ public final class TownyPacifistSettings {
         return Boolean.parseBoolean(
             config.getString(TownyPacifistConfigNodes.ALLOW_PACIFIST_IN_ARENAS.getRoot(), "true"));
     }
+
+    public static boolean allowPacifistInCaptureSites() {
+        return Boolean.parseBoolean(
+            config.getString(TownyPacifistConfigNodes.ALLOW_PACIFIST_IN_CAPTURE_SITES.getRoot(), "true"));
+    }
 }

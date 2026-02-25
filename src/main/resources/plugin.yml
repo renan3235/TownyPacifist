@@ -6,4 +6,4 @@ authors: [ RN_Axol ]
 description: 'Towny addon — blocks combat involving towns with PVP disabled (peaceful towns)'
 
 depend: [ Towny ]
-softdepend: [ SiegeWar ]
+softdepend: [ SiegeWar, TownyCaptureSites ]
