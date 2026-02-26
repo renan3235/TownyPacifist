@@ -34,9 +34,9 @@ Many servers struggle with a common problem: players from peaceful towns getting
 | Plugin | Required |
 |---|---|
 | [Towny](https://github.com/TownyAdvanced/Towny) | ✅ Required |
-| [EventWar](https://github.com/TownyAdvanced/Towny) | ➕ Optional (integrates automatically) |
+| [EventWar](https://townyadvanced.github.io/wars/eventwar) | ➕ Optional (integrates automatically) |
 | [SiegeWar](https://github.com/TownyAdvanced/SiegeWar) | ➕ Optional (integrates automatically) |
-| [TownyCaptureSites](https://github.com/TownyAdvanced/TownyCaptureSites) | ➕ Optional (integrates automatically) |
+| [TownyCaptureSites](https://github.com/LlmDl/SponsorPlugins/blob/main/TownyCaptureSites.md) | ➕ Optional (integrates automatically) |
 
 ---
 
