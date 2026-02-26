@@ -30,6 +30,7 @@ Many servers struggle with a common problem: players from peaceful towns getting
 - **TownyCaptureSites integration** — allows peaceful players to fight inside capture sites when installed
 - **Multi-language** — ships with 9 languages (en-US, pt-BR, es-ES, fr-FR, de-DE, zh-CN, ru-RU, pl-PL, tr-TR)
 - **Lightweight** — a single event listener, no databases, no commands
+- **Cross-platform** — runs on Bukkit, Spigot, Paper, Purpur and Folia
 
 ---
 

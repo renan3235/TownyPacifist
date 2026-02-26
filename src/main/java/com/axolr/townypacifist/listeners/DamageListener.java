@@ -18,17 +18,17 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 
-import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class DamageListener implements Listener {
 
     /** Players who have already been notified about arena PvP this visit. */
-    private final Set<UUID> arenaNotified = new HashSet<>();
+    private final Set<UUID> arenaNotified = ConcurrentHashMap.newKeySet();
 
     /** Players who have already been notified about capture site PvP this visit. */
-    private final Set<UUID> captureSiteNotified = new HashSet<>();
+    private final Set<UUID> captureSiteNotified = ConcurrentHashMap.newKeySet();
 
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
     public void onTownyPlayerDamagePlayer(TownyPlayerDamagePlayerEvent event) {
