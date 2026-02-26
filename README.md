@@ -1,5 +1,9 @@
 # ☮ TownyPacifist
 
+<p align="center">
+  <img src="images/logo.jpg" alt="TownyPacifist" width="400"/>
+</p>
+
 [![Modrinth](https://img.shields.io/modrinth/dt/townypacifist-addon?logo=modrinth&label=Modrinth&color=00AF5C)](https://modrinth.com/project/townypacifist-addon)
 [![GitHub Release](https://img.shields.io/github/v/release/renan3235/TownyPacifist?logo=github&label=Release)](https://github.com/renan3235/TownyPacifist/releases/latest)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
